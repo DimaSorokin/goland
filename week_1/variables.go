@@ -71,11 +71,30 @@ func main() {
 	// конвертация в слайс байт и обратно
 	var byteString = []byte(helloWorld)
 	helloWorld = string(byteString)
+
 	fmt.Println(byteString, helloWorld)
 	//Константы
 	const (
-		hello = "Привет"
-		e     = 2.718
+		hello_const = "Привет"
+		e_const     = 2.718
 	)
+	//Константный инкремент
+	const (
+		zero  = iota
+		_     // пустая переменная, пропуск iota
+		three // = 3
+	)
+	fmt.Println("********************************")
+	fmt.Println(zero, three)
+
+	const (
+		// нетипизированная константа
+		year = 2017
+		// типизированная константа
+		yearTyped int = 2017
+	)
+	/**
+	Нельзя прибавлять переменные с разными типами, int32 + int (panic)
+	*/
 
 }
